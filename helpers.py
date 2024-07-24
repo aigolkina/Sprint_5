@@ -8,7 +8,7 @@ class Help:
 
     @staticmethod
     def random_email():
-        return f"aigolkina11{random.randint(111, 999)} @mail.ru"
+        return f"aigolkina11{random.randint(111, 999)}@mail.ru"
 
     @staticmethod
     def random_password():

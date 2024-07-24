@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+
 class TestPersonalArea:
     def test_click_on_the_personal_account_button(self):
         driver = webdriver.Chrome()

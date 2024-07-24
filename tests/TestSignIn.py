@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+
 class TestSignIn:
     def test_sign_in_login_to_account_valid(self):
         driver = webdriver.Chrome()

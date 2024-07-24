@@ -2,7 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
-class TestAuth:
+
+class TestRegistration:
     def test_auth_valid(self):
         driver = webdriver.Chrome()
         driver.get("https://stellarburgers.nomoreparties.site/") # Зайти на сайт Stellar Burgers

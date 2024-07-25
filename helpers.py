@@ -13,3 +13,7 @@ class Help:
     @staticmethod
     def random_password():
         return f"{random.randint(111111, 999999)}"
+
+    @staticmethod
+    def random_password_invalid():
+        return f"{random.randint(111, 999)}"

@@ -1,6 +1,11 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+
 from data.models import Models
+from helpers import Help
+from locators.registration_locators import RegistrationLocators
 
 
 @pytest.fixture
@@ -10,5 +15,3 @@ def driver():
 
     yield driver
     driver.quit()
-
-

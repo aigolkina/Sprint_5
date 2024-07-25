@@ -8,8 +8,8 @@ from data.models import Models
 from conftest import driver
 
 
-class TestLogout:
-    def test_exit_using_the_exit_button_in_your_personal_account(self, driver):
+class TestPersonalArea:
+    def test_click_on_the_personal_account_button(self, driver):
 
         element_signin = WebDriverWait(driver, Models.WAIT_TIME).until(
             expected_conditions.element_to_be_clickable(RegistrationLocators.LOGIN_TO_ACCOUNT_BUTTON))
@@ -31,10 +31,6 @@ class TestLogout:
             expected_conditions.element_to_be_clickable(RegistrationLocators.ACCOUNT_BUTTON))
         element_cabinet.click()  # Найти кнопку "Личный кабинет" и тапнуть на нее
 
-        element_logout = WebDriverWait(driver, Models.WAIT_TIME).until(
-            expected_conditions.element_to_be_clickable(RegistrationLocators.LOGOUT_BUTTON))
-        element_logout.click()  # Найти кнопку "Выйти" и тапнуть на нее
-
-        element_signin_examination = WebDriverWait(driver, Models.WAIT_TIME).until(
-            expected_conditions.element_to_be_clickable(RegistrationLocators.SIGNIN_BUTTON))  # Найти кнопку "Войти" и тапнуть на нее
-        assert element_signin_examination.text == Models.SIGNIN_BUTTON
+        element_profile = WebDriverWait(driver, Models.WAIT_TIME).until(
+            expected_conditions.element_to_be_clickable(RegistrationLocators.PROFILE_BUTTON))  # Найти слово "Профиль"
+        assert element_profile.text == Models.PROFILE_BUTTON  # Проверка на выполнение перехода в личный кабинет

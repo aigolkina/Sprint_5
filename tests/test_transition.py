@@ -56,7 +56,7 @@ class TestTransition:
         element_signin.click()  # Найти кнопку "Войти" и тапнуть на нее
 
         element_logo = WebDriverWait(driver, Models.WAIT_TIME).until(
-            expected_conditions.element_to_be_clickable(HomeLocators.lOGO_SVG))
+            expected_conditions.element_to_be_clickable(HomeLocators.LOGO_SVG))
         element_logo.click()  # Найти логитип "Stellar Burgers" и тапнуть на него
 
         element_text = WebDriverWait(driver, Models.WAIT_TIME).until(

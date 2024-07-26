@@ -10,7 +10,7 @@ from conftest import driver
 
 
 class TestRegistration:
-    def test_auth_valid(self, driver):
+    def test_registration_valid(self, driver):
         element_cabinet = WebDriverWait(driver, Models.WAIT_TIME).until(
             expected_conditions.element_to_be_clickable(RegistrationLocators.ACCOUNT_BUTTON))
         element_cabinet.click()  # Найти кнопку "Личный кабинет" и тапнуть на нее
@@ -39,7 +39,7 @@ class TestRegistration:
             expected_conditions.visibility_of_element_located(RegistrationLocators.SIGNIN_BUTTON))
         assert element_button_signin.text == Models.SIGNIN_WORD  # Проверка на выполнение входа
 
-    def test_auth_invalid(self, driver):
+    def test_registration_invalid(self, driver):
         element_cabinet = WebDriverWait(driver, Models.WAIT_TIME).until(
              expected_conditions.element_to_be_clickable(RegistrationLocators.ACCOUNT_BUTTON))
         element_cabinet.click()  # Найти кнопку "Личный кабинет" и тапнуть на нее
